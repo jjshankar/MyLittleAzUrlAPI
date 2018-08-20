@@ -39,3 +39,7 @@ Thumbs.db
 
 # dotCover
 *.dotCover
+
+#application keys
+application.json
+
