@@ -41,7 +41,7 @@ Thumbs.db
 *.dotCover
 
 #application keys
-application.json
+appsettings.json
 
 MyLittleAzUrlAPI/appsettings.json
 MyLittleAzUrlAPI/appsettings.json
