@@ -67,6 +67,44 @@ namespace MyLittleAzUrlAPI.Controllers
             return NotFound();
         }
 
+        // Route: api/littleurl
+        [HttpDelete("{key}")]
+        public IActionResult Delete(string key)
+        {
+            if (key.Length == 0)
+                return BadRequest("URL value is required.");
+
+            // Check if the URL exists
+            LittleUrlAzure item = (LittleUrlAzure)_azureContext.GetUrl(key.ToLower(), false).Result.Result;
+            if (item == null)
+                return NotFound("URL does not exist.");
+
+            // Found document; Delete
+            item = (LittleUrlAzure)_azureContext.ToggleDelete(key.ToLower(), true).Result;
+
+            // return deleted item
+            return Ok(item);
+        }
+
+        // Route: api/littleurl
+        [HttpPost("{key}")]
+        public IActionResult UnDelete(string key)
+        {
+            if (key.Length == 0)
+                return BadRequest("URL value is required.");
+
+            // Check if the deleted URL exists
+            LittleUrlAzure item = (LittleUrlAzure)_azureContext.GetUrl(key.ToLower(), true).Result.Result;
+            if (item == null)
+                return NotFound("URL does not exist.");
+
+            // Found document; UnDelete
+            item = (LittleUrlAzure)_azureContext.ToggleDelete(key.ToLower(), false).Result;
+
+            // return deleted item
+            return Ok(item);
+        }
+
         // Private
         private int GetNextId()
         {

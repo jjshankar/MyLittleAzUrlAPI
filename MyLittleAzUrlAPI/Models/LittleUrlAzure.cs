@@ -28,6 +28,29 @@ namespace MyLittleAzUrlAPI.Models
             get => this.Timestamp.DateTime;
         }
 
+        public bool IsDeleted
+        {
+            get => (this.PartitionKey != bool.TrueString);
+        }
+
+        public DateTime LastAccessedTime
+        {
+            get;
+            set;
+        }
+
+        public DateTime DeletedTime
+        {
+            get;
+            set;
+        }
+
+        public DateTime PurgeDate
+        {
+            get;
+            set;
+        }
+
         public LittleUrlAzure()
         {
         }
@@ -38,6 +61,9 @@ namespace MyLittleAzUrlAPI.Models
             this.RowKey = key;
             this.LongUrl = value;
             this.UrlId = id;
+            this.LastAccessedTime = DateTime.MinValue;
+            this.DeletedTime = DateTime.MinValue;
+            this.PurgeDate = DateTime.MinValue;
         }
     }
 }
