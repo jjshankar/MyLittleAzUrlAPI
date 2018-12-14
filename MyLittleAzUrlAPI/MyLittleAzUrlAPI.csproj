@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -13,4 +14,7 @@
     <PackageReference Include="WindowsAzure.Storage" Version="9.3.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Properties\PublishProfiles\MyLittleAzUrlAPI - Web Deploy.pubxml" />
+  </ItemGroup>
 </Project>
