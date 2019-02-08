@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  mylittleazurlapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"

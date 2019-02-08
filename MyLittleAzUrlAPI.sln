@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLittleAzUrlAPI", "MyLittleAzUrlAPI\MyLittleAzUrlAPI.csproj", "{C0A60C07-C2D0-4214-8610-4031C8281745}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{CF53D74F-A9CD-47B4-AD2F-F5C4074936CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,9 @@ Global
 		{C0A60C07-C2D0-4214-8610-4031C8281745}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0A60C07-C2D0-4214-8610-4031C8281745}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0A60C07-C2D0-4214-8610-4031C8281745}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF53D74F-A9CD-47B4-AD2F-F5C4074936CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF53D74F-A9CD-47B4-AD2F-F5C4074936CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF53D74F-A9CD-47B4-AD2F-F5C4074936CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF53D74F-A9CD-47B4-AD2F-F5C4074936CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
