@@ -33,7 +33,8 @@ namespace MyLittleAzUrlAPI.Models
             // Read from config file
             var configBuilder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json");   
+                .AddJsonFile("appsettings.json")
+                .AddEnvironmentVariables();
 
             storageConnectionString = configBuilder.Build().GetValue<string>("AzureTable:ConnectionString");
             _tableName = configBuilder.Build().GetValue<string>("AzureTable:TableName");
